@@ -1,15 +1,14 @@
 import telepot
 import json
 import Strike
-import time
+import logger
 
 
 def telegramBot():
     datasetsOld = []
     id = 1  # counter var
-    updateIdOld = 0  # no updates fetched
 
-    print("Listening....")
+    logger.writeLine("Listening....")
 
     while True:
         # load config files
@@ -37,8 +36,8 @@ def telegramBot():
             try:
                 json_data_file.write(json.dumps(data))  # write data to file, if it fails, catch error
             except:
-                print(str(time.time()) + ": Error while writing file, please check your permissions! (need to be "
-                                         "read write (chmod 777 config.json)")  # time until the 1.1.1970 in ms
+                logger.writeLine("Error while writing file, please check your permissions! (need to be "
+                                 "read write (chmod 777 config.json)")  # time until the 1.1.1970 in ms
             json_data_file.close()
 
         messages = dict()
@@ -63,6 +62,9 @@ def telegramBot():
                                          "einfügen\n\nSchema:\nTitel\nBeschreibung\nDatum und Uhrzeit\nStartpunkt / "
                                          "Treffpunkt\nEndpunkt\nRoutenlänge\nWebsite Veranstalter (wenn nicht bekannt "
                                          "NONE schreiben)\n", chat_id=chatId)
+                    continue
+                if message == "log":
+                    bot.sendMessage(text=logger.readLogs(), chat_id=chatId)  # send logs with bot
                     continue
 
                 try:
@@ -118,13 +120,11 @@ def telegramBot():
             model.strikeId = id
 
             model.save()
-
-            print("Stored!")
             id += 1
 
         datasetsOld = datasets
-        print(datasets)
-        print("Wrote data to server")
+        # print(datasets)
+        logger.writeLine("Wrote data to server")
 
 
 if "__main__":
