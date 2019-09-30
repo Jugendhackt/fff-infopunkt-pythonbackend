@@ -53,6 +53,10 @@ The messages need to be formated with the following pattern:
 
 **If an element does not exists add 'None' / 'none' / 'NONE' to the line**
 
+## Other informations about running the system:
+* We are writing log files, you can view them in file logger.log. The timestamp is counted in Milliseconds from the 01.01.1970 (you can easily convert them with bash)
+* Our server at the moment only runs with 0.5 Gb of RAM (so not that much), so please don't send a million messages at once
+
 ## Planned for future:
 * Integration to more chat services
 * Email
