@@ -1,7 +1,12 @@
 import telepot from telepot.delegate import per_chat_id
 import create_open
 import pave_event_space
-import include_callback_query_chat_id import json import Strike import time def telegramBot():
+import include_callback_query_chat_id
+import json
+import Strike
+import time
+
+def telegramBot():
     datasets = []
     datasetsOld = []
     id = 1  # counter var
