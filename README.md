@@ -38,7 +38,7 @@ Please format the file in the following way:
 2. Run on an arm machine like the Raspberry Pi `docker run -d pboehler/fffinfopythonbackendserver:rpi`
 
 ## Format the messages:
-The messages need to be formated with the following pattern:
+The messages need to be formatted with the following pattern:
 1. bot:
 2. A title
 3. A short description (need to be one line)
@@ -53,7 +53,13 @@ The messages need to be formated with the following pattern:
 
 **If an element does not exists add 'None' / 'none' / 'NONE' to the line**
 
+## Other information about running the system:
+* We are writing log files, you can view them in file logger.log. The timestamp is counted in Milliseconds from the 01.01.1970 (you can easily convert them with bash)
+* Our server at the moment only runs with 0.5 Gb of RAM (so not that much), so please don't send a million messages at once
+
 ## Planned for future:
 * Integration to more chat services
 * Email
 * ML for text recognition
+* Migration to MongoDB (we only want to use OS Software)
+
