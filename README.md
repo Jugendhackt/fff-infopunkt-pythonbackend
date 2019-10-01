@@ -1,4 +1,4 @@
- ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) ![docker](https://img.shields.io/badge/Docker-We%20use%20Docker-blue) ![JugendHackt](https://img.shields.io/badge/JugendHackt-made%20with%20%3C3-success=)
+ ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) ![docker](https://img.shields.io/badge/Docker-We%20use%20Docker-blue) ![JugendHackt](https://jhbadge.com/?year=2019&evt=ffm)
 
 # FFF Info Python Backend / Telegram chatbot
 ![logo](logo.png)
