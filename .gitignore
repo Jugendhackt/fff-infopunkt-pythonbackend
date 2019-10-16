@@ -3,3 +3,4 @@ venv/*
 __pycache__/*
 logger.log
 config.json
+now.json
